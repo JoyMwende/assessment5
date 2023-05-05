@@ -9,7 +9,7 @@ get_header(); ?>
 <?php
 $args = [
     'post_type' => 'food',
-    'posts_per_page' => 3
+    'posts_per_page' => 2
 ];
 
 $foods = new WP_Query($args);

@@ -1,18 +1,38 @@
-<?php get_header(); ?>
+<?php
+
+/**
+ * Template Name: Food Template
+ */
+
+get_header(); ?>
 
 <?php
-if (have_posts()) :
-    while (have_posts()) : the_post();
+$args = [
+    'post_type' => 'food',
+    'posts_per_page' => 3
+];
+
+$foods = new WP_Query($args);
+
+if ($foods->have_posts()) :
+    while ($foods->have_posts()) : $foods->the_post();
 ?>
 
-<?php get_template_part('content', get_post_format()) ?>
+        <div class="card">
+            <div class="card-header">
+                <?php the_title(sprintf('<h2 class="entry-title"> <a href="%s">', esc_url(get_permalink())), '</a></h2>') ?>
+            </div>
+            <div class="card-body">
+                <h5 class="thumbnail-img"><?php the_post_thumbnail('thumbnail') ?></h5>
+                <p class="card-text"><?php the_content() ?></p>
 
-<?php //the_title(); 
+            </div>
+        </div>
+<?php
+    endwhile;
+endif;
 ?>
-<?php //the_content(); 
-?>
-<?php endwhile; ?>
-<?php endif; ?>
+<h6 href="#" class="card-link"><?php previous_posts_link(); ?></h6>
+<h6 href="#" class="card-link"> <?php next_posts_link() ?></h6>
 
-
-<?php get_footer(); ?>
+<?php get_footer() ?>

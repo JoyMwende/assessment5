@@ -15,7 +15,6 @@ if (have_posts()) :
                                                     echo ' || ';
                                                     edit_post_link();
                                                 } ?></h5>
-                        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
                         <p class="card-text"><?php the_content(); ?></p>
                         <p class="card-text"><?php echo 'Categories: ';
                                                 the_category(); ?></p>
@@ -32,8 +31,8 @@ if (have_posts()) :
                                                 echo customterm_get_terms($post->ID, 'Fibre');
 
                                                 ?></p>
-                        <h6 href="#" class="card-link"><?php previous_post_link(); ?></h6>
-                        <h6 href="#" class="card-link"> <?php next_post_link() ?></h6>
+                        <h6 href="#" class="card-link"><?php previous_post_link('<< Previous Page'); ?></h6>
+                        <h6 href="#" class="card-link"> <?php next_post_link('Next Page >>') ?></h6>
                     </div>
                 </div>
                 <header>

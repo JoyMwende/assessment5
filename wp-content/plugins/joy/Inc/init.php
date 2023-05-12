@@ -13,7 +13,9 @@
         */
         public static function get_services(){
             return [
-                Pages\MemberRegistration::class
+                Pages\MemberRegistration::class,
+                Pages\AdminPage::class,
+                Base\Enqueue::class
             ];
         }
     

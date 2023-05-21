@@ -35,8 +35,8 @@
     
         /**
         * Initialize the class
-        * @param class $class class from the services array
-        * @return class instance new instance of the class
+        *  class from the services array
+        * instance new instance of the class
         */
         private static function instantiate($class){
             $service = new $class();

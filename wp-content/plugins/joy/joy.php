@@ -25,10 +25,10 @@ if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
     require_once dirname(__FILE__) . '/vendor/autoload.php';
 }
 
-function admin_add_members_cb()
-{
-    require_once plugin_dir_path(__FILE__) . 'templates/register-member.php';
-}
+// function admin_add_members_cb()
+// {
+//     require_once plugin_dir_path(__FILE__) . 'templates/register-member.php';
+// }
 
 function activate_joyplugin()
 {

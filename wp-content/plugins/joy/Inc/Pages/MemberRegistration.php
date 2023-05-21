@@ -48,7 +48,7 @@ class MemberRegistration{
             $result = $wpdb->insert($table_name, $data, $format = NULL);
 
             if ($result == true) {
-                echo "<script> alert('Product added successfully!');</script>";
+                echo "<script> alert('Member added successfully!');</script>";
 
                 $data['full_name'] = '';
                 $data['phone_number'] = '';
@@ -56,7 +56,7 @@ class MemberRegistration{
                 $data['programming_language'] = '';
                 $data['cohort_number'] = '';
             } else {
-                echo "<script>alert('Product not added!');</script>";
+                echo "<script>alert('Member not added!');</script>";
             }
         }
     }
